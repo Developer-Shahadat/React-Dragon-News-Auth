@@ -5,8 +5,12 @@ import NavBarPage from "../Shared/NavBar/NavBarPage";
 import RightSideNav from "../Shared/Right-Side-Nav/RightSideNav";
 import LeftSideNav from "../Shared/Left-Side-Nav/LeftSideNav";
 import BreakingNews from "./BreakingNews";
+import { useLoaderData } from "react-router-dom";
+import NewsShow from "./NewsShow";
 
 const HomePage = () => {
+  const newsData = useLoaderData();
+  console.log(newsData);
   return (
     <div>
       <HeaderPage></HeaderPage>
@@ -21,7 +25,9 @@ const HomePage = () => {
         </div>
 
         <div className="md:col-span-2 border">
-          <h2> News Coming Soon....</h2>
+          {
+            newsData.map(item => <NewsShow key={item._id} news={item}></NewsShow>)
+          }
         </div>
 
         <div className="border">
