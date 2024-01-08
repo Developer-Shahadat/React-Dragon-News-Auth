@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const NewsShow = ({ news }) => {
   const { title, image_url, details, _id } = news;
+  
+
   return (
     <div className="card  bg-base-100 shadow-xl mt-10">
       <figure>
@@ -19,6 +22,7 @@ const NewsShow = ({ news }) => {
           <p>{details}</p>
         )}
       </div>
+      
     </div>
   );
 };

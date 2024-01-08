@@ -5,7 +5,9 @@ import HeaderPage from "../Shared/Header/HeaderPage";
 import NavBarPage from "../Shared/NavBar/NavBarPage";
 
 const NewsDetails = () => {
-  const { id,title, image_url, details } = useParams();
+
+  const { id  } = useParams();
+
   return (
     <div>
         <HeaderPage></HeaderPage>
@@ -14,9 +16,7 @@ const NewsDetails = () => {
             <div className="col-span-3">
             <h2 className="text-3xl">Dragon News</h2>
             <p>{id}</p>
-            <img src={image_url} alt="" />
-            <h3>{title}</h3>
-            <p>{details}</p>
+           
             </div>
             <div>
                 <RightSideNav></RightSideNav>
